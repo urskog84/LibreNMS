@@ -14,7 +14,6 @@ prompt: !ruby/regexp /^([\w.@-]+[#>]\s?)$/
 rest: 0.0.0.0:9888/oxidized
 next_adds_job: false
 vars: {}
-groups: {}
 group_map: {}
 models: {}
 pid: "/root/.config/oxidized/pid"

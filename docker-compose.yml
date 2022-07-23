@@ -166,7 +166,5 @@ services:
     environment:
       CONFIG_RELOAD_INTERVAL: 600
     volumes:
-        - ./oxidized/config:/root/.config/oxidized/config
-        - ./oxidized/configs:/root/.config/oxidized/configs
-        - ./oxidized/git:/root/.config/oxidized/git
+        - ./oxidized:/root/.config/oxidized
     restart: always

@@ -1,0 +1,55 @@
+---
+username: username
+password: password
+model: junos
+resolve_dns: true
+interval: 3600
+use_syslog: false
+debug: false
+threads: 30
+use_max_threads: false
+timeout: 20
+retries: 3
+prompt: !ruby/regexp /^([\w.@-]+[#>]\s?)$/
+rest: 0.0.0.0:9888/oxidized
+next_adds_job: false
+vars: {}
+groups: {}
+group_map: {}
+models: {}
+pid: "/root/.config/oxidized/pid"
+crash:
+  directory: "/root/.config/oxidized/crashes"
+  hostnames: false
+stats:
+  history_size: 10
+input:
+  default: ssh, telnet
+  debug: false
+  ssh:
+    secure: false
+  ftp:
+    passive: true
+  utf8_encoded: true
+output:
+  default: file
+  file:
+    directory: "/root/.config/oxidized/configs"
+source:
+  default: http
+  debug: false
+  http:
+    url: http://192.168.1.3:8000/api/v0/oxidized
+    map:
+      name: hostname
+      model: os
+      group: group
+    headers:
+      X-Auth-Token: ae18614557419ce8eaf9106343da98fb
+groups:
+  cisco:
+    username: admin
+    password: truhe8a8
+  edgeos:
+    username: ubnt
+    password: truhe8a8

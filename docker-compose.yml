@@ -167,7 +167,6 @@ services:
       CONFIG_RELOAD_INTERVAL: 600
     volumes:
         - ./oxidized/config:/root/.config/oxidized/config
-        - ./oxidized/router.db:/root/.config/oxidized/router.db
-        - ./oxidized/model:/root/.config/oxidized/model
-        - ./oxidized/data:/root/.config/oxidized/backupcfg/
+        - ./oxidized/configs:/root/.config/oxidized/configs
+        - ./oxidized/git:/root/.config/oxidized/git
     restart: always
